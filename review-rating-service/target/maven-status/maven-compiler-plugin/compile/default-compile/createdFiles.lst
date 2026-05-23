@@ -1,0 +1,17 @@
+com/mentorhub/reviewratingservice/repository/ReviewRepository.class
+com/mentorhub/reviewratingservice/ReviewRatingServiceApplication.class
+com/mentorhub/reviewratingservice/controller/ReviewController.class
+com/mentorhub/reviewratingservice/repository/BatchEnrollmentRepository.class
+com/mentorhub/reviewratingservice/config/CorsConfig.class
+com/mentorhub/reviewratingservice/model/BatchEnrollment.class
+com/mentorhub/reviewratingservice/model/Review$ReviewBuilder.class
+com/mentorhub/reviewratingservice/repository/StudentProfileRepository.class
+com/mentorhub/reviewratingservice/service/ReviewPostProcessingService.class
+com/mentorhub/reviewratingservice/service/ReviewService.class
+com/mentorhub/reviewratingservice/model/TutorProfile.class
+com/mentorhub/reviewratingservice/model/Review.class
+com/mentorhub/reviewratingservice/config/AsyncConfig.class
+com/mentorhub/reviewratingservice/model/UserAccount.class
+com/mentorhub/reviewratingservice/repository/TutorProfileRepository.class
+com/mentorhub/reviewratingservice/repository/TutorRatingSyncRepository.class
+com/mentorhub/reviewratingservice/model/StudentProfile.class
