@@ -1,0 +1,12 @@
+com/mentorhub/notificationservice/dto/NotificationResponse$NotificationResponseBuilder.class
+com/mentorhub/notificationservice/model/Notification.class
+com/mentorhub/notificationservice/service/NotificationService.class
+com/mentorhub/notificationservice/dto/CreateNotificationRequest$CreateNotificationRequestBuilder.class
+com/mentorhub/notificationservice/controller/NotificationController.class
+com/mentorhub/notificationservice/controller/InternalNotificationController.class
+com/mentorhub/notificationservice/model/Notification$NotificationBuilder.class
+com/mentorhub/notificationservice/dto/CreateNotificationRequest.class
+com/mentorhub/notificationservice/NotificationServiceApplication.class
+com/mentorhub/notificationservice/repository/NotificationRepository.class
+com/mentorhub/notificationservice/dto/NotificationResponse.class
+com/mentorhub/notificationservice/config/CorsConfig.class
