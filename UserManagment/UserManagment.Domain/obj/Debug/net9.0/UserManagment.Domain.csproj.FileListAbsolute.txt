@@ -1,0 +1,11 @@
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\bin\Debug\net9.0\UserManagment.Domain.deps.json
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\bin\Debug\net9.0\UserManagment.Domain.dll
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\bin\Debug\net9.0\UserManagment.Domain.pdb
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\obj\Debug\net9.0\UserManagment.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\obj\Debug\net9.0\UserManagment.Domain.AssemblyInfoInputs.cache
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\obj\Debug\net9.0\UserManagment.Domain.AssemblyInfo.cs
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\obj\Debug\net9.0\UserManagment.Domain.csproj.CoreCompileInputs.cache
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\obj\Debug\net9.0\UserManagment.Domain.dll
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\obj\Debug\net9.0\refint\UserManagment.Domain.dll
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\obj\Debug\net9.0\UserManagment.Domain.pdb
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Domain\obj\Debug\net9.0\ref\UserManagment.Domain.dll

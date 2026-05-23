@@ -22,3 +22,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Backend / build
+target/
+build/
+out/
+
+# Python/AI services (if any)
+__pycache__/
+*.pyc
+
+# Scratch / temp
+scratch/
+
+# OS
+.DS_Store

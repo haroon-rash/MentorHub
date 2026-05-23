@@ -1,0 +1,221 @@
+{
+  "Routes": [
+    {
+      "RouteIsCaseSensitive": false,
+      "UpstreamPathTemplate": "/api/v1/auth/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/auth/{everything}"
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "UpstreamPathTemplate": "/api/v1/profile/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/profile/{everything}"
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "UpstreamPathTemplate": "/api/v1/dashboard/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/dashboard/{everything}"
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "UpstreamPathTemplate": "/api/v1/tutors/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/tutors/{everything}"
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "UpstreamPathTemplate": "/api/v1/student-onboarding/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/student-onboarding/{everything}"
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "UpstreamPathTemplate": "/api/v1/tutor-onboarding/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/tutor-onboarding/{everything}"
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "UpstreamPathTemplate": "/api/v1/super-admin/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/super-admin/{everything}"
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "UpstreamPathTemplate": "/api/v1/files/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/files/{everything}"
+    },
+    {
+      "RouteIsCaseSensitive": false,
+      "UpstreamPathTemplate": "/uploads/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/uploads/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/bookings/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/bookings/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/chat/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/chat/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/notifications/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/notifications/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/reviews/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/reviews/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/payments/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/payments/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/chatHub/{everything}",
+      "DownstreamScheme": "ws",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/chatHub/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/cms/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch", "Delete", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/cms/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/cms",
+      "UpstreamHttpMethod": [ "Get", "Post", "Options" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/cms"
+    }
+
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8080"
+  }
+}

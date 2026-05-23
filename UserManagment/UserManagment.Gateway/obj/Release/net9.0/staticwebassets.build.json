@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "EPBtGX/AxJgx4kO/jdaqNnQPAanAkNYadz7hnjH3zEo=",
+  "Source": "UserManagment.Gateway",
+  "BasePath": "_content/UserManagment.Gateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

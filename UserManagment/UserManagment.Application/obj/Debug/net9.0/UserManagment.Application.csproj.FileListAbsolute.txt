@@ -1,0 +1,15 @@
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\bin\Debug\net9.0\UserManagment.Application.deps.json
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\bin\Debug\net9.0\UserManagment.Application.dll
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\bin\Debug\net9.0\UserManagment.Application.pdb
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\bin\Debug\net9.0\UserManagment.Domain.dll
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\bin\Debug\net9.0\UserManagment.Domain.pdb
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\obj\Debug\net9.0\UserManagment.Application.csproj.AssemblyReference.cache
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\obj\Debug\net9.0\UserManagment.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\obj\Debug\net9.0\UserManagment.Application.AssemblyInfoInputs.cache
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\obj\Debug\net9.0\UserManagment.Application.AssemblyInfo.cs
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\obj\Debug\net9.0\UserManagment.Application.csproj.CoreCompileInputs.cache
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\obj\Debug\net9.0\UserMana.A6EFFAA0.Up2Date
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\obj\Debug\net9.0\UserManagment.Application.dll
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\obj\Debug\net9.0\refint\UserManagment.Application.dll
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\obj\Debug\net9.0\UserManagment.Application.pdb
+C:\Users\yasin\Desktop\MentorHub\MentorHub\UserManagment\UserManagment.Application\obj\Debug\net9.0\ref\UserManagment.Application.dll

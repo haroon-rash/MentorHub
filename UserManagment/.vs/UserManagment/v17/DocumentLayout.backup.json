@@ -1,0 +1,281 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB3371EC-E963-499D-A452-41A54FEDEC3C}|UserManagment.Application\\UserManagment.Application.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.application\\services\\studentprogressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB3371EC-E963-499D-A452-41A54FEDEC3C}|UserManagment.Application\\UserManagment.Application.csproj|solutionrelative:usermanagment.application\\services\\studentprogressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C2E65B8-D3D2-4916-9B05-04B404283B4B}|UserManagment.Infrastructure\\UserManagment.Infrastructure.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.infrastructure\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C2E65B8-D3D2-4916-9B05-04B404283B4B}|UserManagment.Infrastructure\\UserManagment.Infrastructure.csproj|solutionrelative:usermanagment.infrastructure\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB3371EC-E963-499D-A452-41A54FEDEC3C}|UserManagment.Application\\UserManagment.Application.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.application\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB3371EC-E963-499D-A452-41A54FEDEC3C}|UserManagment.Application\\UserManagment.Application.csproj|solutionrelative:usermanagment.application\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB3371EC-E963-499D-A452-41A54FEDEC3C}|UserManagment.Application\\UserManagment.Application.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.application\\services\\authusersyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB3371EC-E963-499D-A452-41A54FEDEC3C}|UserManagment.Application\\UserManagment.Application.csproj|solutionrelative:usermanagment.application\\services\\authusersyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB3371EC-E963-499D-A452-41A54FEDEC3C}|UserManagment.Application\\UserManagment.Application.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.application\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB3371EC-E963-499D-A452-41A54FEDEC3C}|UserManagment.Application\\UserManagment.Application.csproj|solutionrelative:usermanagment.application\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C1CF0B0-93A9-4312-A2FC-C22B2F89E8CE}|UserManagment.Domain\\UserManagment.Domain.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.domain\\entities\\assessmentrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C1CF0B0-93A9-4312-A2FC-C22B2F89E8CE}|UserManagment.Domain\\UserManagment.Domain.csproj|solutionrelative:usermanagment.domain\\entities\\assessmentrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.api\\controllers\\studentonboardingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|solutionrelative:usermanagment.api\\controllers\\studentonboardingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|solutionrelative:usermanagment.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.api\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|solutionrelative:usermanagment.api\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|solutionrelative:usermanagment.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.api\\controllers\\cmscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|solutionrelative:usermanagment.api\\controllers\\cmscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.api\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|solutionrelative:usermanagment.api\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.api\\controllers\\admintutorreviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|solutionrelative:usermanagment.api\\controllers\\admintutorreviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.api\\usermanagment.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|solutionrelative:usermanagment.api\\usermanagment.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6DFAE47-D1DD-4A3C-BB63-D3AE79B82A5F}|UserManagment.Gateway\\UserManagment.Gateway.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.gateway\\usermanagment.gateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E6DFAE47-D1DD-4A3C-BB63-D3AE79B82A5F}|UserManagment.Gateway\\UserManagment.Gateway.csproj|solutionrelative:usermanagment.gateway\\usermanagment.gateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|c:\\users\\yasin\\desktop\\mentorhub\\mentorhub\\usermanagment\\usermanagment.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{57F0D733-DB86-43A1-8CCC-23E649D09B92}|UserManagment.API\\UserManagment.API.csproj|solutionrelative:usermanagment.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentProgressService.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Application\\Services\\StudentProgressService.cs",
+              "RelativeDocumentMoniker": "UserManagment.Application\\Services\\StudentProgressService.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Application\\Services\\StudentProgressService.cs",
+              "RelativeToolTip": "UserManagment.Application\\Services\\StudentProgressService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:52:38.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotificationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Infrastructure\\Repositories\\NotificationRepository.cs",
+              "RelativeDocumentMoniker": "UserManagment.Infrastructure\\Repositories\\NotificationRepository.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Infrastructure\\Repositories\\NotificationRepository.cs",
+              "RelativeToolTip": "UserManagment.Infrastructure\\Repositories\\NotificationRepository.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:52:28.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Application\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "UserManagment.Application\\Services\\BookingService.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Application\\Services\\BookingService.cs",
+              "RelativeToolTip": "UserManagment.Application\\Services\\BookingService.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:52:11.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthUserSyncService.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Application\\Services\\AuthUserSyncService.cs",
+              "RelativeDocumentMoniker": "UserManagment.Application\\Services\\AuthUserSyncService.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Application\\Services\\AuthUserSyncService.cs",
+              "RelativeToolTip": "UserManagment.Application\\Services\\AuthUserSyncService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:52:09.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IBookingService.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Application\\Interfaces\\IBookingService.cs",
+              "RelativeDocumentMoniker": "UserManagment.Application\\Interfaces\\IBookingService.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Application\\Interfaces\\IBookingService.cs",
+              "RelativeToolTip": "UserManagment.Application\\Interfaces\\IBookingService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:52:03.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssessmentRecord.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Domain\\Entities\\AssessmentRecord.cs",
+              "RelativeDocumentMoniker": "UserManagment.Domain\\Entities\\AssessmentRecord.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Domain\\Entities\\AssessmentRecord.cs",
+              "RelativeToolTip": "UserManagment.Domain\\Entities\\AssessmentRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:51:53.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentOnboardingController.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\StudentOnboardingController.cs",
+              "RelativeDocumentMoniker": "UserManagment.API\\Controllers\\StudentOnboardingController.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\StudentOnboardingController.cs",
+              "RelativeToolTip": "UserManagment.API\\Controllers\\StudentOnboardingController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:50:50.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "UserManagment.API\\Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "UserManagment.API\\Controllers\\ReviewsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:50:43.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "UserManagment.API\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "UserManagment.API\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:50:42.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NotificationsController.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\NotificationsController.cs",
+              "RelativeDocumentMoniker": "UserManagment.API\\Controllers\\NotificationsController.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\NotificationsController.cs",
+              "RelativeToolTip": "UserManagment.API\\Controllers\\NotificationsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:50:40.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CmsController.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\CmsController.cs",
+              "RelativeDocumentMoniker": "UserManagment.API\\Controllers\\CmsController.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\CmsController.cs",
+              "RelativeToolTip": "UserManagment.API\\Controllers\\CmsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:50:39.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "UserManagment.API\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "UserManagment.API\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:50:37.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AdminTutorReviewController.cs",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\AdminTutorReviewController.cs",
+              "RelativeDocumentMoniker": "UserManagment.API\\Controllers\\AdminTutorReviewController.cs",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Controllers\\AdminTutorReviewController.cs",
+              "RelativeToolTip": "UserManagment.API\\Controllers\\AdminTutorReviewController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T21:50:32.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserManagment.API.csproj",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\UserManagment.API.csproj",
+              "RelativeDocumentMoniker": "UserManagment.API\\UserManagment.API.csproj",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\UserManagment.API.csproj",
+              "RelativeToolTip": "UserManagment.API\\UserManagment.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-02T21:50:25.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserManagment.Gateway.csproj",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Gateway\\UserManagment.Gateway.csproj",
+              "RelativeDocumentMoniker": "UserManagment.Gateway\\UserManagment.Gateway.csproj",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.Gateway\\UserManagment.Gateway.csproj",
+              "RelativeToolTip": "UserManagment.Gateway\\UserManagment.Gateway.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-23T20:39:56.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Dockerfile",
+              "RelativeDocumentMoniker": "UserManagment.API\\Dockerfile",
+              "ToolTip": "C:\\Users\\yasin\\Desktop\\MentorHub\\MentorHub\\UserManagment\\UserManagment.API\\Dockerfile",
+              "RelativeToolTip": "UserManagment.API\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-10T23:54:12.054Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
