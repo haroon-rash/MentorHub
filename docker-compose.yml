@@ -1,0 +1,259 @@
+services:
+  # ── Infrastructure ──────────────────────────────────────────
+  postgres:
+    image: postgres:15-alpine
+    container_name: mentorhub-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: mentorhub
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d mentorhub"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: mentorhub-mailpit
+    restart: unless-stopped
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+
+  # ── Auth Service (Spring Boot, existing) ─────────────────────
+  auth-service:
+    build:
+      context: .
+      dockerfile: Authentication-Service/Dockerfile
+    container_name: mentorhub-auth-service
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SERVER_PORT: 5006
+      DB_URL: jdbc:postgresql://postgres:5432/mentorhub
+      DB_USERNAME: postgres
+      DB_PASSWORD: admin
+      JPA_SHOW_SQL: "true"
+      SPRING_FLYWAY_ENABLED: "true"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "none"
+      SPRING_JPA_HIBERNATE_NAMING_PHYSICAL_STRATEGY: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      SPRING_MAIL_HOST: ${SMTP_HOST:-mailpit}
+      SPRING_MAIL_PORT: ${SMTP_PORT:-1025}
+      SPRING_MAIL_USERNAME: ${SMTP_USERNAME:-}
+      SPRING_MAIL_PASSWORD: ${SMTP_PASSWORD:-}
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: ${SMTP_AUTH:-false}
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: ${SMTP_STARTTLS_ENABLE:-false}
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_CONNECTIONTIMEOUT: 5000
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_TIMEOUT: 5000
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_WRITETIMEOUT: 5000
+      APP_OTP_EXPIRY_MINUTES: 10
+      APP_OTP_CODE_LENGTH: 6
+      APP_OTP_SEND_EMAIL: "true"
+      APP_MAIL_FROM: ${SMTP_FROM:-noreply.mentorhub@gmail.com}
+      JWT_ACCESS_EXPIRATION_MS: 259200000
+      JWT_REFRESH_EXPIRATION_MS: 259200000
+      APP_SECURITY_PASSWORD_RESET_TOKEN_MS: 259200000
+      APP_CORS_ALLOWED_ORIGINS: http://localhost:3005,http://localhost:5173
+      APP_SECURITY_SUPER_ADMIN_EMAIL: haroonurrasheed1212@gmail.com
+      APP_SECURITY_SUPER_ADMIN_PASSWORD: admin
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-dummy-client-id}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-dummy-client-secret}
+      GOOGLE_REDIRECT_URI: http://localhost:5006/api/v1/auth/oauth/success
+      APP_SERVICES_USERMANAGMENT_URL: http://usermanagment-api:8085
+      APP_INTERNAL_API_KEY: ${INTERNAL_API_KEY:-mentorhub-docker-internal-key}
+    ports:
+      - "${AUTH_SERVICE_HOST_PORT:-5006}:5006"
+
+  # ── Student Service (Spring Boot, NEW) ───────────────────────
+  student-service:
+    build:
+      context: ./student-service
+    container_name: mentorhub-student-service
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SERVER_PORT: 8086
+      DB_URL: jdbc:postgresql://postgres:5432/mentorhub
+      DB_USERNAME: postgres
+      DB_PASSWORD: admin
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "none"
+      SPRING_JPA_HIBERNATE_NAMING_PHYSICAL_STRATEGY: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      APP_CORS_ALLOWED_ORIGINS: http://localhost:3005,http://localhost:5173
+    ports:
+      - "8086:8086"
+
+  # ── Tutor Service (Spring Boot, NEW) ─────────────────────────
+  tutor-service:
+    build:
+      context: ./tutor-service
+    container_name: mentorhub-tutor-service
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SERVER_PORT: 8087
+      DB_URL: jdbc:postgresql://postgres:5432/mentorhub
+      DB_USERNAME: postgres
+      DB_PASSWORD: admin
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "none"
+      SPRING_JPA_HIBERNATE_NAMING_PHYSICAL_STRATEGY: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      APP_CORS_ALLOWED_ORIGINS: http://localhost:3005,http://localhost:5173
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY:-mentorhub-docker-internal-key}
+      APP_SECURITY_REQUIRE_GATEWAY_TRUST: "true"
+    ports:
+      - "8087:8087"
+
+  # ── Review & Rating Service (Spring Boot, NEW) ──────────────
+  review-rating-service:
+    build:
+      context: ./review-rating-service
+    container_name: mentorhub-review-rating-service
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SERVER_PORT: 8090
+      DB_URL: jdbc:postgresql://postgres:5432/mentorhub
+      DB_USERNAME: postgres
+      DB_PASSWORD: admin
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "none"
+      SPRING_JPA_HIBERNATE_NAMING_PHYSICAL_STRATEGY: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      APP_CORS_ALLOWED_ORIGINS: http://localhost:3005,http://localhost:5173
+      AI_SENTIMENT_SERVICE_URL: http://ai-sentiment-service:8093
+      TUTOR_SERVICE_URL: http://tutor-service:8087
+      NOTIFICATION_SERVICE_URL: http://notification-service:8091
+    ports:
+      - "8090:8090"
+
+  # ── Notification Service (Spring Boot, NEW) ──────────────────
+  notification-service:
+    build:
+      context: ./notification-service
+    container_name: mentorhub-notification-service
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SERVER_PORT: 8091
+      DB_URL: jdbc:postgresql://postgres:5432/mentorhub
+      DB_USERNAME: postgres
+      DB_PASSWORD: admin
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "none"
+      SPRING_JPA_HIBERNATE_NAMING_PHYSICAL_STRATEGY: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      APP_CORS_ALLOWED_ORIGINS: http://localhost:3005,http://localhost:5173
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY:-mentorhub-docker-internal-key}
+    ports:
+      - "8091:8091"
+
+  # ── AI Sentiment Service (Python FastAPI) ─────────────────────
+  ai-sentiment-service:
+    build:
+      context: ./ai-sentiment-service
+    container_name: mentorhub-ai-sentiment-service
+    restart: unless-stopped
+    ports:
+      - "8093:8093"
+
+  # ── Recommendation Service (Python FastAPI) ───────────────────
+  recommendation-service:
+    build:
+      context: ./recommendation-service
+    container_name: mentorhub-recommendation-service
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://postgres:admin@postgres:5432/mentorhub
+      FEED_CACHE_TTL_SECONDS: 300
+    ports:
+      - "8094:8094"
+
+  # ── User Management (.NET Core, slimmed — Chat + Files) ─────
+  usermanagment-api:
+    build:
+      context: .
+      dockerfile: UserManagment/UserManagment.API/Dockerfile
+    container_name: mentorhub-usermanagment-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_URLS: http://+:8085
+      ASPNETCORE_ENVIRONMENT: Docker
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=mentorhub;Username=postgres;Password=admin
+      Cors__AllowedOrigins__0: http://localhost:3005
+      Cors__AllowedOrigins__1: http://localhost:5173
+      Services__AuthServiceUrl: http://auth-service:5006
+      Services__NotificationServiceUrl: http://notification-service:8091
+      InternalApi__Key: ${INTERNAL_API_KEY:-mentorhub-docker-internal-key}
+      InternalApi__NotificationServiceKey: ${INTERNAL_API_KEY:-mentorhub-docker-internal-key}
+      Security__RequireGatewayTrust: "true"
+      PlatformEmail__Enabled: ${PlatformEmail__Enabled:-true}
+      PlatformEmail__Host: ${PlatformEmail__Host:-smtp.gmail.com}
+      PlatformEmail__Port: ${PlatformEmail__Port:-587}
+      PlatformEmail__Username: ${PlatformEmail__Username:-contact.mentorhub@gmail.com}
+      PlatformEmail__Password: ${PlatformEmail__Password:-}
+      PlatformEmail__From: ${PlatformEmail__From:-contact.mentorhub@gmail.com}
+      PlatformEmail__FromDisplayName: ${PlatformEmail__FromDisplayName:-MentorHub}
+      PlatformEmail__Inbox: ${PlatformEmail__Inbox:-contact.mentorhub@gmail.com}
+      PlatformEmail__UseStartTls: ${PlatformEmail__UseStartTls:-true}
+    ports:
+      - "8085:8085"
+    volumes:
+      - uploads_data:/app/wwwroot/uploads
+
+  # ── API Gateway (.NET Ocelot, updated routes) ────────────────
+  api-gateway:
+    build:
+      context: .
+      dockerfile: UserManagment/UserManagment.Gateway/Dockerfile
+    container_name: mentorhub-api-gateway
+    restart: unless-stopped
+    depends_on:
+      - auth-service
+      - usermanagment-api
+      - student-service
+      - tutor-service
+      - review-rating-service
+      - notification-service
+      - recommendation-service
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: Docker
+    ports:
+      - "8080:8080"
+
+  # ── Frontend (Vite React, unchanged) ─────────────────────────
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_AUTH_API_BASE_URL: http://localhost:8080
+        VITE_CORE_API_BASE_URL: http://localhost:8080
+        VITE_USER_API_BASE_URL: http://localhost:8080
+    container_name: mentorhub-frontend
+    restart: unless-stopped
+    depends_on:
+      - api-gateway
+    ports:
+      - "3005:3005"
+
+volumes:
+  postgres_data:
+  uploads_data:
