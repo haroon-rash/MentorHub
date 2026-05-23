@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MentorHub — Domain Class Diagram</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #64748b;
+      --accent: #4f46e5;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px 28px 32px;
+      background: var(--card);
+      min-height: 100vh;
+    }
+    header {
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .meta span strong { color: var(--ink); }
+    .legend {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px 16px;
+      font-size: 0.75rem;
+      padding: 12px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .legend dt { font-weight: 600; color: var(--accent); }
+    .legend dd { color: var(--muted); margin-left: 0; }
+    .diagram-wrap {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      background: #fff;
+      overflow: auto;
+    }
+    .mermaid {
+      display: flex;
+      justify-content: center;
+    }
+    footer {
+      margin-top: 14px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media print {
+      @page { size: A3 landscape; margin: 10mm; }
+      body { background: #fff; }
+      .page { max-width: none; padding: 0; box-shadow: none; min-height: auto; }
+      .diagram-wrap { border: none; padding: 0; overflow: visible; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>MentorHub — Domain Class Diagram</h1>
+      <p>Single-page logical model · signup role (Student | Tutor) · microservices boundaries</p>
+    </header>
+
+    <div class="meta">
+      <span><strong>Auth:</strong> Authentication-Service (Java / Spring)</span>
+      <span><strong>Core:</strong> UserManagment.Domain (.NET)</span>
+      <span><strong>Notifications:</strong> notification-service (Java)</span>
+      <span><strong>Reviews:</strong> review-rating-service (Java)</span>
+      <span><strong>Gateway:</strong> API Gateway → downstream services</span>
+    </div>
+
+    <dl class="legend">
+      <dt>Identity</dt><dd>One signup role per account; platform profiles linked by AuthUserId</dd>
+      <dt>LMS</dt><dd>TutorBatch + BatchEnrollment + generated class sessions (monthly packages)</dd>
+      <dt>Booking</dt><dd>Legacy hourly one-off sessions (separate from batch enrollment)</dd>
+      <dt>──▶</dt><dd>Association / navigation property</dd>
+      <dt>─▶</dt><dd>Cross-service reference (AuthUserId, no FK)</dd>
+    </dl>
+
+    <div class="diagram-wrap">
+      <pre class="mermaid">
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '11px', 'primaryColor': '#eef2ff', 'primaryBorderColor': '#4f46e5', 'lineColor': '#64748b', 'tertiaryColor': '#f8fafc'}, 'flowchart': {'curve': 'basis'}}}%%
+classDiagram
+direction TB
+
+namespace Auth_Service {
+  class User {
+    +UUID id
+    +String email
+    +String name
+    +UserRole role
+    +boolean isVerified
+    +UserReviewStatus reviewStatus
+  }
+  class Provider {
+    +UUID id
+    +AuthProvider providerName
+    +String providerUserId
+  }
+  class EmailOtp {
+    +UUID id
+    +String email
+    +String purpose
+    +LocalDateTime expiresAt
+  }
+  class RevokedToken {
+    +String tokenId
+    +String tokenType
+    +LocalDateTime expiresAt
+  }
+  class OutboxMessage {
+    +UUID id
+    +String eventType
+    +OutboxStatus status
+  }
+  User "1" --> "*" Provider : OAuth
+}
+
+namespace Platform_Identity {
+  class UserAccount {
+    +UUID id
+    +String authUserId
+    +String email
+    +PlatformUserRole role
+    +bool isEmailVerified
+  }
+  class TutorProfile {
+    +UUID id
+    +TutorVerificationStatus verificationStatus
+    +decimal hourlyFee
+    +string subjectsCsv
+    +double averageRating
+  }
+  class StudentProfile {
+    +UUID id
+    +string educationLevel
+    +string subjectsCsv
+    +int profileCompleteness
+  }
+  UserAccount "1" --> "0..1" TutorProfile
+  UserAccount "1" --> "0..1" StudentProfile
+  User ..> UserAccount : sync via authUserId
+}
+
+namespace LMS_Batch_Enrollment {
+  class TutorBatch {
+    +UUID id
+    +string title
+    +string subject
+    +DateTime startDateUtc
+    +DateTime endDateUtc
+    +decimal packageFee
+    +BatchLifecycleStatus lifecycleStatus
+  }
+  class BatchEnrollment {
+    +UUID id
+    +BatchEnrollmentStatus status
+    +DateTime startDateUtc
+    +DateTime endDateUtc
+    +decimal monthlyFeeAmount
+  }
+  class GeneratedClassSession {
+    +UUID id
+    +DateTime sessionDateUtc
+    +ClassSessionStatus status
+    +string meetingLink
+  }
+  class EnrollmentBillingPeriod {
+    +UUID id
+    +int periodIndex
+    +decimal feeAmount
+    +BillingPeriodStatus status
+  }
+  TutorProfile "1" --> "*" TutorBatch : owns
+  TutorBatch "1" --> "*" GeneratedClassSession : generates
+  TutorBatch "1" --> "*" BatchEnrollment
+  StudentProfile "1" --> "*" BatchEnrollment
+  TutorProfile "1" --> "*" BatchEnrollment
+  BatchEnrollment "1" --> "*" EnrollmentBillingPeriod
+}
+
+namespace Hourly_Booking {
+  class Booking {
+    +UUID id
+    +DateTime bookingDate
+    +BookingStatus status
+    +string subject
+    +decimal fee
+    +string meetingLink
+  }
+  StudentProfile "1" --> "*" Booking
+  TutorProfile "1" --> "*" Booking
+}
+
+namespace Learning_Content {
+  class CourseAssignment {
+    +UUID id
+    +string title
+    +DateTime dueDateUtc
+    +AssignmentWorkflowStatus status
+  }
+  class AssignmentSubmission {
+    +UUID id
+    +SubmissionStatus status
+    +decimal marksObtained
+    +string tutorFeedback
+  }
+  class StudyMaterial {
+    +UUID id
+    +string title
+    +string fileUrl
+  }
+  class LearningGoal {
+    +UUID id
+    +string title
+    +string status
+    +int completionPercent
+  }
+  class AssessmentRecord {
+    +UUID id
+    +string subject
+    +decimal scoreObtained
+    +decimal totalScore
+  }
+  class SessionNote {
+    +UUID id
+    +string content
+    +DateTime sessionDateUtc
+  }
+  class SessionAttendance {
+    +UUID id
+    +bool attended
+    +string notes
+  }
+  TutorProfile "1" --> "*" CourseAssignment
+  TutorBatch "0..1" --> "*" CourseAssignment
+  CourseAssignment "1" --> "*" AssignmentSubmission
+  StudentProfile "1" --> "*" AssignmentSubmission
+  StudentProfile "1" --> "*" LearningGoal
+  StudentProfile "1" --> "*" AssessmentRecord
+  GeneratedClassSession "1" --> "*" SessionAttendance
+  BatchEnrollment "1" --> "*" SessionAttendance
+}
+
+namespace Engagement {
+  class Review {
+    +UUID id
+    +int rating
+    +string comment
+    +ReviewType reviewType
+    +string sentiment
+  }
+  class ChatMessage {
+    +UUID id
+    +string senderAuthUserId
+    +string receiverAuthUserId
+    +string content
+    +bool isRead
+  }
+  class Notification {
+    +UUID id
+    +string recipientAuthUserId
+    +int type
+    +string title
+    +bool isRead
+  }
+  StudentProfile "1" --> "*" Review
+  TutorProfile "1" --> "*" Review
+  Booking "0..1" --> Review
+  BatchEnrollment "0..1" --> Review
+  UserAccount ..> Notification : recipientAuthUserId
+  UserAccount ..> ChatMessage : authUserId
+}
+
+namespace Admin_Platform {
+  class CmsPage {
+    +UUID id
+    +string slug
+    +string title
+    +string content
+  }
+  class PlatformCatalogItem {
+    +UUID id
+    +string category
+    +string value
+  }
+  class UserWarning {
+    +UUID id
+    +string reason
+    +WarningSeverity severity
+  }
+  class AccountRestriction {
+    +UUID id
+    +RestrictionType restrictionType
+    +DateTime expiresAtUtc
+  }
+  class AdminActionAudit {
+    +UUID id
+    +string action
+    +string performedBy
+  }
+  class TutorVerificationAudit {
+    +UUID id
+    +TutorVerificationStatus decision
+  }
+  class BlockedUser {
+    +UUID id
+    +string blockerAuthUserId
+    +string blockedAuthUserId
+  }
+  UserAccount "1" --> "*" UserWarning
+  UserAccount "1" --> "*" AccountRestriction
+  TutorProfile "1" --> "*" TutorVerificationAudit
+}
+
+namespace Payment {
+  class Payment {
+    +UUID id
+    +decimal amount
+    +PaymentStatus status
+    +string providerReference
+  }
+  BatchEnrollment "0..1" --> Payment
+  Booking "0..1" --> Payment
+}
+      </pre>
+    </div>
+
+    <footer>
+      MentorHub v4 · Generated from UserManagment.Domain + Authentication-Service · Open this file in a browser → Print → Save as PDF (A3 landscape recommended)
+    </footer>
+  </div>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'loose',
+      class: { hideEmptyMembersBox: true }
+    });
+  </script>
+</body>
+</html>
