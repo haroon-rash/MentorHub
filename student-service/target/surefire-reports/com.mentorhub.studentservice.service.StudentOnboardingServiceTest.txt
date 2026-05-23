@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mentorhub.studentservice.service.StudentOnboardingServiceTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.575 s -- in com.mentorhub.studentservice.service.StudentOnboardingServiceTest

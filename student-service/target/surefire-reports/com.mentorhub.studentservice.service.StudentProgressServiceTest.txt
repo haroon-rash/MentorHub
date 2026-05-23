@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mentorhub.studentservice.service.StudentProgressServiceTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.42 s -- in com.mentorhub.studentservice.service.StudentProgressServiceTest
