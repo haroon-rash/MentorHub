@@ -1,0 +1,118 @@
+/* src/pages/HomePage/HomePage.css */
+
+.homepage {
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  background: linear-gradient(135deg, #3f51b5 0%, #00bcd4 100%); /* Indigo to Teal Gradient */
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.btn-primary-large {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #ffc107; /* Bright Accent */
+  color: #3f51b5;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary-large:hover {
+  background-color: #ffeb3b;
+  transform: translateY(-2px);
+}
+
+/* --- Features Section --- */
+.features-section h2,
+.featured-tutors-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3f51b5;
+  margin-bottom: 40px;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.feature-card {
+  background-color: #f7f9fd; /* Light background */
+  padding: 30px;
+  border-radius: 10px;
+  border-bottom: 4px solid #00bcd4; /* Accent line */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  color: #3f51b5;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #616161;
+}
+
+/* --- Featured Tutors Section --- */
+.tutors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.btn-secondary-centered {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 25px;
+  border: 2px solid #3f51b5;
+  color: #3f51b5;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-centered:hover {
+  background-color: #3f51b5;
+  color: white;
+}

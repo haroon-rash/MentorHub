@@ -1,0 +1,132 @@
+/* src/pages/Auth/Auth.css */
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f0f4f8; /* Light, calming background */
+  padding: 40px 20px;
+}
+
+.auth-card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+.auth-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3f51b5;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.auth-switch-text {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #616161;
+}
+
+.switch-btn {
+  background: none;
+  border: none;
+  color: #00bcd4; /* Accent color */
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 5px;
+  text-decoration: underline;
+}
+
+/* --- Forms --- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #3f51b5;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+}
+
+.btn-auth-submit {
+  padding: 12px;
+  background-color: #00897b; /* Success/Go color */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-auth-submit:hover {
+  background-color: #00695c;
+}
+
+.forgot-password {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #3f51b5;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+/* --- Register-specific Styles (User Type Selector) --- */
+.user-type-selector {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.type-btn {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #4a4a4a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.type-btn.selected {
+  border-color: #3f51b5;
+  background-color: #e8eaf6;
+  color: #3f51b5;
+}
+
+.terms-note {
+    font-size: 0.85rem;
+    text-align: center;
+    color: #9e9e9e;
+}

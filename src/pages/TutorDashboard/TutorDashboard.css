@@ -1,0 +1,47 @@
+/* src/pages/TutorDashboard/TutorDashboard.css */
+
+.profile-page {
+  background-color: var(--color-white);
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--color-success);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.tag-indigo {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+
+.profile-card ul {
+  padding-left: 20px;
+  color: var(--color-text-light);
+}
+
+.profile-card li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Specific button style for Tutor Dashboard */
+.user-sidebar .btn-edit-profile {
+  background-color: var(--color-success);
+  border: none;
+  color: white;
+}
+
+.user-sidebar .btn-edit-profile:hover {
+  background-color: #00695c;
+}

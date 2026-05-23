@@ -1,0 +1,44 @@
+/* src/pages/StudentProfile/StudentProfile.css */
+
+.profile-page {
+  background-color: var(--color-white);
+  min-height: 80vh;
+}
+
+.user-sidebar h3 {
+  color: var(--color-primary);
+  margin-bottom: 5px;
+}
+
+.user-sidebar p {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.btn-edit-profile {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  margin-top: 10px;
+}
+
+.btn-edit-profile:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.profile-card h2 {
+  font-size: 1.4rem;
+  color: var(--color-text-dark);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--color-background-light);
+  padding-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

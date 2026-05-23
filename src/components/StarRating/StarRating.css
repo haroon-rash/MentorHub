@@ -1,0 +1,49 @@
+/* src/components/StarRating/StarRating.css */
+
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #ffc107; /* Gold/Yellow for stars */
+  gap: 2px;
+}
+
+.star {
+  display: inline-block;
+  user-select: none;
+}
+
+.star.empty {
+  color: #ccc; /* Light gray for empty stars */
+}
+
+.rating-value {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #616161;
+  font-weight: 500;
+}
+
+/* Half Star Styling (using absolute positioning to layer them) */
+.half-star-container {
+    position: relative;
+    width: 1.2em; /* Ensure enough space */
+    height: 1.2em;
+    overflow: hidden;
+}
+
+.half-star-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Only fill half */
+    overflow: hidden;
+    color: #ffc107;
+}
+
+.half-star-empty {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+}
